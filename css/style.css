@@ -83,8 +83,13 @@ body {
 	order: 10;
 }
 
+// 控制顺序置顶
 .fixed-item {
 	order: 1;
+}
+
+.flex-item-holder {
+	margin: 0 10px 20px;
 }
 
 .card {
