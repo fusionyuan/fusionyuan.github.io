@@ -38,7 +38,7 @@ body {
 	display: block;
 	float: left;
     height: 50px;
-    padding: 15px 0;
+    padding: 15px;
     font-size: 18px;
     line-height: 20px;
     text-decoration: none;
@@ -73,16 +73,22 @@ body {
 	// height: 300px;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
+	// justify-content: flex-start;
 	// background-color: #ddd;
 }
 
 .flex-item {
-	flex: auto;
+	// flex: auto;
+	flex: 1 1 300px;
+	order: 10;
+}
+
+.fixed-item {
+	order: 1;
 }
 
 .card {
-	width: 360px;
+	// width: 360px;
 	margin: 0 10px 20px;
 	background-color: #FFF;
 	border-radius: 5px;
@@ -92,7 +98,7 @@ body {
 
 .post {
 	position: relative;
-	background-color: #252525;
+	// background-color: #252525;
 }
 
 .post a {
@@ -107,34 +113,46 @@ body {
 
 .post .cat {
 	position: absolute;
-	top: 20px;
-	left: 20px;
+	top: 15px;
+	left: 15px;
 	z-index: 99;
 	color: #FFF;
 	font-weight: bold;
 	letter-spacing: 2px;
 	padding: 5px 10px;
 	// border: 2px solid #FFF;
-	background-color: rgba(255, 255, 255, 0.25)
+	background-color: rgba(255, 255, 255, 0.2)
 }
 
-.post:hover>.thumb>img {
+.post:hover>.thumb img {
 	opacity: 1;
 }
 
 .post .thumb {
+	position: relative;
 	display: inline;
 	width: inherit;
 	overflow: hidden;
 }
 
+.post .focus {
+	position: relative;
+	background-color: #252525;
+}
+
 .post .thumb img {
 	width: 100%;
+}
+
+.post .thumb .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
 	opacity: 0.75;
-	-moz-transition: all 0.25s ease-in;
-    -webkit-transition: all 0.25s ease-in;
-    -o-transition: all 0.25 ease-in;
-    transition: all 0.25s ease-in;
+	-moz-transition: opacity 0.25s ease-in;
+    -webkit-transition: opacity 0.25s ease-in;
+    -o-transition: opacity 0.25 ease-in;
+    transition: opacity 0.25s ease-in;
 }
 
 .post .post-info {
