@@ -1,0 +1,178 @@
+body {
+	font-family: 'Microsoft Yahei';
+	-webkit-font-smoothing: antialiased;
+	background-color: #F1F1F1;
+    position: relative;
+    padding-top: 65px;
+    color: #555;
+}
+
+#app {
+	max-width: 1980px;
+}
+
+#profile {
+	width: 300px;
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    padding-top: 50px;
+	background-color: #283138;
+	color: #BBB;
+}
+
+#app-nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding-left: 320px;
+	min-height: 50px;
+	background-color: #FFF;
+	border-bottom: 1px solid #EAEAEA;
+
+}
+
+#app-nav .brand {
+	display: block;
+	float: left;
+    height: 50px;
+    padding: 15px 0;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #777;
+}
+
+#artist .avatar {
+	border-radius: 50%;
+	width: 50%;
+	margin-left: 25%;
+	border: 5px solid #DDD;
+	overflow: hidden;
+}
+
+#artist .avatar img {
+	width: 100%;
+}
+
+#artist .name {
+	font-size: 24px;
+	color: #F1F1F1;
+}
+
+#main {
+	padding-left: 320px;
+	padding-right: 20px;
+	// border: 1px solid #333;
+	height: 200vh;
+}
+
+.flex-container {
+	// height: 300px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	// background-color: #ddd;
+}
+
+.flex-item {
+	flex: auto;
+}
+
+.card {
+	width: 360px;
+	margin: 0 10px 20px;
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid #EAEAEA;
+	overflow: hidden;
+}
+
+.post {
+	position: relative;
+	background-color: #252525;
+}
+
+.post a {
+	position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 101;
+    height: 100%;
+}
+
+.post .cat {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 99;
+	color: #FFF;
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding: 5px 10px;
+	// border: 2px solid #FFF;
+	background-color: rgba(255, 255, 255, 0.25)
+}
+
+.post:hover>.thumb>img {
+	opacity: 1;
+}
+
+.post .thumb {
+	display: inline;
+	width: inherit;
+	overflow: hidden;
+}
+
+.post .thumb img {
+	width: 100%;
+	opacity: 0.75;
+	-moz-transition: all 0.25s ease-in;
+    -webkit-transition: all 0.25s ease-in;
+    -o-transition: all 0.25 ease-in;
+    transition: all 0.25s ease-in;
+}
+
+.post .post-info {
+	padding: 5%!important;
+	background-color: #FFF;
+}
+
+.post .title {
+	font-size: 18px;
+	line-height: 1.5em;
+	margin: 0 0 10px;
+	font-weight: bold;
+}
+
+.post .note {
+	position: relative;
+	text-indent: 2em;
+	color: #777;
+	line-height: 1.5em;
+	height: 7.5em;
+	overflow: hidden;
+}
+
+.post .note::after{
+	content: "....";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0 20px;
+	background: -webkit-linear-gradient(left, transparent, #fff 55%);
+	background: -o-linear-gradient(right, transparent, #fff 55%);
+	background: -moz-linear-gradient(right, transparent, #fff 55%);
+	background: linear-gradient(to right, transparent, #fff 55%);
+}
+
+@media (min-width: 1024px) {
+// .card  {
+// 	flex: 2 6 10%;
+// }
+
+}
