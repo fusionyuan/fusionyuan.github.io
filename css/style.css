@@ -23,7 +23,7 @@ a {
 	bottom: 0;
 	width: 100%;;
 	text-align: center;
-	z-index: 305;
+	z-index: 999;
 }
 
 #back-to-top .back {
