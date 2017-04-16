@@ -23,6 +23,7 @@ a {
 	bottom: 0;
 	width: 100%;;
 	text-align: center;
+	z-index: 305;
 }
 
 #back-to-top .back {
@@ -34,7 +35,8 @@ a {
 	border: 1px solid #EAEAEA;
 	border-bottom: none;
 	border-top-left-radius: 5px;
-	border-top-right-radius: 5px
+	border-top-right-radius: 5px;
+	color: #777;
 }
 
 #profile {
@@ -265,7 +267,7 @@ a {
 	background: linear-gradient(to right, transparent, #fff 55%);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 body {
 	padding-top: 55px;
 }
