@@ -14,7 +14,23 @@
   <body>
     <div id="app">
       <div id="app-nav">
-        <a href="#" class="brand">Evermotion3D</a>
+        <div class="logo">
+          <a href="#" class="brand">Evermotion3D</a>
+        </div>
+        <div class="nav">
+          <ul class="menu">
+            <li><a href="">技术</a></li>
+            <li><a href="">工作</a></li>
+            <li><a href="">生活</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">工具</a></li>
+            <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="brand-avatar">
+        <img src="./img/avatar.png" alt="">
+        <span>FUSION</span>
       </div>
       <div id="profile">
         <div class="profile">
@@ -386,10 +402,30 @@
           <article class="flex-item flex-item-holder"></article>
         </div>
       </div>
+      <div id="back-to-top">
+        <a data-scroll href="#main" class="back">BACK TO TOP</a>
+      </div>
     </div>
 
 
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        smoothScroll.init();
+
+        $(window).scroll(function() {
+          var isHidden = $("#back-to-top").is(":hidden");
+          if (  isHidden && $(window).scrollTop() > 1000) {
+            $("#back-to-top").fadeIn().delay(3000).fadeOut();
+          } else {
+             $("#back-to-top").fadeOut();
+          }
+        })
+
+      });
+    </script>
   </body>
 </html>
