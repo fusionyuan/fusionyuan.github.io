@@ -38,6 +38,17 @@ a {
 	color: #777;
 }
 
+#mask-screen {
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 888;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
 #profile {
 	width: 300px;
 	position: fixed;
