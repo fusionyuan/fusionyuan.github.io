@@ -446,7 +446,10 @@
             "display": "none",
           })
           maskScreen.fadeOut('fast');
-          profile.css("left", "0px");
+          profile.css({
+            "left": "0",
+            "display": "block"
+          });
         })
       // });
     </script>

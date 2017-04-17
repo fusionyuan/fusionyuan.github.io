@@ -39,7 +39,7 @@ a {
 }
 
 #mask-screen {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.75);
 	z-index: 888;
 	display: none;
 	position: fixed;
