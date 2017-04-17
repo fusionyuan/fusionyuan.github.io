@@ -1,9 +1,11 @@
 body {
-	font-family: 'Microsoft Yahei',"Helvetica Neue",Helvetica,Arial,sans-serif;
-	-webkit-font-smoothing: antialiased;
+	position: relative;
 	background-color: #F6F6F6;
-    position: relative;
     color: #555;
+    // font-weight: 300;
+    font-family: 'Microsoft Yahei',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
 }
 
 a {
@@ -73,7 +75,7 @@ a {
 	width: 100%;
 	padding-left: 320px;
 	height: 50px;
-	background-color: #FFF;
+	background-color: #F6F6F6;
 	border-bottom: 1px solid #EAEAEA;
 	z-index: 300;
 }
@@ -320,6 +322,10 @@ a {
 	padding: 0;
 }
 
+#post-aside {
+	display: none;
+}
+
 }
 
 @media (max-width: 768px) {
@@ -375,6 +381,19 @@ a {
 .card {
 	margin: 0 0 20px 0;
 	border-radius: 0;
+}
+
+#post-content .post-header .title {
+	font-size: 22px;
+	line-height: 36px;
+}
+
+#post-content .post-header .meta {
+	padding-top: 10px;
+}
+
+#post-content .post-body {
+	padding-top: 20px;
 }
 
 }
