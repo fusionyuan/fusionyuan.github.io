@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Fusion's Blog</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/post.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="app">
+      <div id="app-nav">
+        <div class="logo">
+          <a href="#" class="brand">Evermotion3D</a>
+        </div>
+        <div class="nav">
+          <ul class="menu">
+            <li><a href="">技术</a></li>
+            <li><a href="">工作</a></li>
+            <li><a href="">生活</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">工具</a></li>
+            <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="brand-avatar">
+        <img src="./img/avatar.png" alt="">
+        <span>FUSION</span>
+      </div>
+      <div id="profile">
+        <div class="profile">
+          <div id="artist" class="info text-center">
+            <div class="avatar">
+              <img src="./img/avatar.png" alt="FusioN">
+            </div>
+            <h1 class="name">Dilraba Lorem</h1>
+            <h5 class="pro">Web Developer &amp; Freelance CG Artist</h3>
+            <div><i class="fa fa-camera-retro fa-lg"></i></div>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <div id="post-content">
+          <div class="post-header">
+            <h1 class="title">大前端和阿里百秀背后的团队</h1>
+            <p class="meta">May 23, 2016 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By FusioN Yuan</p>
+          </div>
+          <div class="post-body">
+            <p>
+              2015年3月中旬，大前端和阿里百秀优雅合体了，背后是一个新组的团队，有了自己的办公地，这就开工了。
+            </p>
+            <p>
+              大前端，最初是一个专注前端开发的垂直博客，现已发展成为WordPress中文主题开发商，业务多半是围绕WordPress而来，有网站定制的、有网站优化的等等。之前一直是我在独立维护，积累了不少主题开发和前端开发的成熟经验。
+            </p>
+            <p>
+              阿里百秀，一个分享有趣的网站，网站的各大兴趣类频道备受广大兴趣爱好者喜欢，网站形象和内容都在不断升级，希望成为国内领先的兴趣类的网站平台。
+            </p>
+            <p>
+              不一样的开始，不一样的路子，现在走到一起，为了更好的抱团发展，跟随自己的想法。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="back-to-top">
+        <a data-scroll href="#app" class="back">BACK TO TOP</a>
+      </div>
+      <div id="mask-screen"></div>
+    </div>
+
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script>
+      // $(document).ready(function(){
+
+        smoothScroll.init();
+
+        $(window).scroll(function() {
+          var isHidden = $("#back-to-top").is(":hidden");
+          if (  isHidden && $(window).scrollTop() > 1000) {
+            $("#back-to-top").fadeIn().delay(5000).fadeOut();
+          } else {
+             $("#back-to-top").fadeOut();
+          }
+        })
+
+        var brandAvatar = $("#brand-avatar"),
+            profile = $("#profile"),
+            maskScreen = $("#mask-screen");
+        brandAvatar.click(function(){
+          profile.css({
+            "left": "-300px",
+            "display": "block"
+          });
+          maskScreen.fadeIn('fast');
+          profile.animate({
+            "left": "0"
+          })
+        })
+
+        maskScreen.click(function(){
+          profile.animate({
+            "left": "-300px",
+            "display": "none",
+          });
+          maskScreen.fadeOut('fast');
+          profile.css({
+            "left": "0"
+          });
+        })
+      // });
+    </script>
+  </body>
+</html>
