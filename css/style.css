@@ -305,6 +305,7 @@ ul {
 @media (max-width: 480px) {
 
 .index-main {
+	padding-top: 70px;
 	background-color: #F6F6F6;
 }
 
