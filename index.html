@@ -32,11 +32,11 @@
           <div class="collapsed-bar">
             <div class="f-flex">
               <a href="" class="aboutme">ABOUT ME</a>
-              <button id="nav-toggle" class="btn btn-default">
-                <span>
+              <div id="nav-toggle">
+                <span class="xxx">
                   <i></i><i></i><i></i>
                 </span>
-              </button>
+              </div>
             </div>
           </div>
         </div>
@@ -155,5 +155,19 @@
 
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#nav-toggle").click(function(){
+          $("#nav-toggle span").toggleClass("xxx");
+
+          $("#header nav").animate({
+            height:'toggle'
+          });
+        });
+
+      });
+
+
+    </script>
   </body>
 </html>
